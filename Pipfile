@@ -9,6 +9,7 @@ djangorestframework = "*"
 channels = "*"
 djangorestframework-simplejwt = "*"
 django-cors-headers = "*"
+python-decouple = "*"
 
 [dev-packages]
 
