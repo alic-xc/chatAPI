@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8900:8900"
+    volumes:
+      - ./:/usr/src/app
+    command: >
+      sh -c "python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8900"
+
+  redis:
+    image: redis:alpine
+
+    volumes:
+      - ./:/usr/src/app
+
+    depends_on:
+      - redis
+      - app
