@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c8cd725a-6bc5-4d38-9b6a-fb05a499f8ea" name="chat-api">
+        <fileTransfer rootFolder="/home/ubuntu/chatAPI" accessType="SFTP" host="35.179.84.135" port="22" sshConfigId="78a0dbf9-1e3b-4094-b5b7-f0a1e92354ea" sshConfig="ubuntu@35.179.84.135:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

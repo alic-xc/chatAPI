@@ -1,7 +1,7 @@
 from app.views import UserViewSet, ChatViewSet, ChatRoomViewSet
 from django.urls import path, include
+from rest_framework.authtoken.views import obtain_auth_token
 from rest_framework.routers import DefaultRouter
-from rest_framework_simplejwt.views import TokenObtainPairView
 
 route = DefaultRouter()
 route.register(r'users', UserViewSet)
@@ -11,5 +11,5 @@ route.register(r'chat', ChatViewSet)
 
 urlpatterns = [
     path('', include(route.urls)),
-    path('login/', TokenObtainPairView.as_view())
+    path('login/', obtain_auth_token)
 ]
