@@ -8,13 +8,15 @@ https://docs.djangoproject.com/en/4.0/howto/deployment/asgi/
 """
 import os
 import django
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chatAPI.settings')
+django.setup()
+
 from app import routing
 from channels.auth import AuthMiddlewareStack
 from channels.routing import get_default_application, ProtocolTypeRouter, URLRouter
 
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'chatAPI.settings')
-django.setup()
+
 application = ProtocolTypeRouter({
     "http": get_default_application(),
     "websocket": AuthMiddlewareStack(
